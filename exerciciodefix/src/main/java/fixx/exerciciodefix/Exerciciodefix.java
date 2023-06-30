@@ -16,12 +16,13 @@ import java.util.Scanner;
 public class Exerciciodefix {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
         System.out.print("Quantas pessoas serao digitadas: ");
         int quantity = sc.nextInt();
         int valor[] = new int[quantity];
         Entities enti = new Entities();
         List<Entities> user = new ArrayList<>();
+        enti.setQuantity_request(quantity);
         for (int i = 0; i < valor.length; i++) {
             System.out.println("Dados da " + (i + 1) + "° pessoa:");
             System.out.println("Nome: ");
@@ -38,7 +39,7 @@ public class Exerciciodefix {
         }
         for(Entities en : user) {
             if (en.getName() != null) {
-                System.out.println(enti);
+                System.out.println(enti.getName());
             }
         }
     }
