@@ -58,18 +58,23 @@ public class Entities {
     public void setQuantity_request(int quantity_request) {
         this.quantity_request = quantity_request;
     }
-    public int yearsMin(int porcent) {
-
-        return yearsMin(porcent);
-    }
-
-    public double avarege_Height(double avarege_height) {
-
-        return avarege_Height(avarege_height);
-    }
 
     public String toString() {
-        return "names:" +getName()+"\nidade: "+getYears_old();
+
+        int menores = 0;
+        double alturaTotal = 0 , alturaMedia, percentualMenores;
+        for (int i = 0; i < getQuantity_request(); i++) {
+            if (years_old < 16) {
+                menores++;
+            }
+            alturaTotal = height + height;
+        }
+        alturaMedia = alturaTotal / quantity_request;
+        percentualMenores = ((double) menores / quantity_request) * 100;
+        
+        
+        return "\nAltura media ="+alturaMedia+"\nPessoas com menos de 16 anos:\n"+percentualMenores;
+        
     }
 
 }
